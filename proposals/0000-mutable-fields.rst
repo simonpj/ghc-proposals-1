@@ -176,8 +176,14 @@ variables)
 When ``K`` is used in a pattern in a case alternative in Core, the
 types of its fields are ``u1...un``.
 
+SLPJ: really?  I thought they were `Ref# s ui`.
+
 There would be a new constraint on Core: *we cannot create an
 expresison representing a mutable constructor*.
+
+SLPJ: what does this mean?  Better to say: if K is a mutable constructor you cannot use K in an expression (you must use `mkK`).
+
+SLPJ: define the term "mutable constructor" somewhere.
 
 GHC currently assumes that constructors can be built in a couple of
 places:
